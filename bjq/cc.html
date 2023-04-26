@@ -1,106 +1,162 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TVBox接口一键解密</title>
-    <!-- 引入Bootstrap样式库 -->
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0/css/bootstrap.min.css">
-    <style>
-        body {
-            margin-top: 40px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        .input-group {
-            margin-bottom: 20px;
-        }
-        .loading {
-            display: none;
-            margin-top: 20px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                max-width: 100%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>配置解密</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(255, 255, 255);
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      /*垂直方向居中*/
+      align-items: center;
+      /*水平方向居中*/
+      justify-content: center;
+    }
+
+    .content {
+      width: 500px;
+      height: 40px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .ctxt {
+      color: #333;
+      line-height: normal;
+      font-family: "Microsoft YaHei", Tahoma, Verdana, SimSun;
+      font-style: normal;
+      font-variant: normal;
+      font-size-adjust: none;
+      font-stretch: normal;
+      font-weight: normal;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      padding-top: 4px;
+      padding-right: 4px;
+      padding-bottom: 4px;
+      padding-left: 4px;
+      font-size: 15px;
+      outline-width: medium;
+      outline-style: none;
+      outline-color: invert;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      text-shadow: 0px 1px 2px #fff;
+      background-attachment: scroll;
+      background-repeat: repeat-x;
+      background-position-x: left;
+      background-position-y: top;
+      background-size: auto;
+      background-origin: padding-box;
+      background-clip: border-box;
+      background-color: rgb(255, 255, 255);
+      margin-right: 8px;
+      border-top-color: #ccc;
+      border-right-color: #ccc;
+      border-bottom-color: #ccc;
+      border-left-color: #ccc;
+      border-top-width: 1px;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+      border-top-style: solid;
+      border-right-style: solid;
+      border-bottom-style: solid;
+      border-left-style: solid;
+    }
+
+    .ctxt:focus {
+      border: 1px solid #fafafa;
+      -webkit-box-shadow: 0px 0px 6px #007eff;
+      -moz-box-shadow: 0px 0px 5px #007eff;
+      box-shadow: 0px 0px 5px #007eff;
+    }
+
+    #in {
+      width: 80%;
+      height: 100%;
+    }
+
+    #btn {
+      width: 20%;
+      height: 100%;
+    }
+
+
+    .btm {
+      color: #000000;
+      background-color: #FFFFFF;
+      font-size: 23rpx;
+      line-height: 100%;
+      text-align: center;
+      margin: 0 0;
+      margin-left: auto;
+      padding-top: 4px;
+      padding-right: 4px;
+      padding-bottom: 4px;
+      padding-left: 4px;
+      border-radius: 3px;
+      cursor: pointer;
+      border-top-color: #ccc;
+      border-right-color: #ccc;
+      border-bottom-color: #ccc;
+      border-left-color: #ccc;
+      border-top-width: 1px;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+      border-top-style: solid;
+      border-right-style: solid;
+      border-bottom-style: solid;
+      border-left-style: solid;
+    }
+    .btm:hover {
+      background-color: #ccc;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="text-center mb-5">TVBox在线接口一键解密</h1>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" id="url" value="" placeholder="更多有趣网页，请访问大聪明的主页">
-            <button class="btn btn-secondary" type="button" onclick="crawl()">一键解密</button>
-        </div>
-       
-        <div class="text-center loading" id="loading">
-          <div class="spinner-border" role="status">
-            卍<span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
-       
-        <textarea class="form-control" id="result" cols="80" rows="20" readonly></textarea>
-        <div class="text-center mt-3">
-             <button class="btn btn-warning" onclick="copyText()">复制</button>
-            <button class="btn btn-danger" onclick="downloadJar()">下载Jar</button>
-            <a href="http://xduo.app"  target="_blank"class="btn btn-primary">大聪明主页</a>
-            <a href="https://yydsys.top"  target="_blank"class="btn btn-success">风向标导航</a>
-        </div>
-    </div>
-    <!-- 引入Bootstrap JS库 -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0/js/bootstrap.min.js"></script>
-    <script>
-        function crawl() {
-            var xhr = new XMLHttpRequest();
-            var url = document.getElementById('url').value;
-            var resultBox = document.getElementById('result');
-            xhr.open("GET", "crawler.php?url=" + encodeURIComponent(url), true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    resultBox.value = xhr.responseText;
-                    document.getElementById('loading').style.display = 'none';
-                }
-            };
-            resultBox.value = '';
-            document.getElementById('loading').style.display = 'block';
-            xhr.send();
-        }
-        function downloadJar() {
-            var resultBox = document.getElementById('result');
-            var url = resultBox.value.match(/"spider":"(.*?)"/)[1];
-            if (url.includes(';md5;')) {
-                url = url.split(';md5;')[0];
-            }
-            fetch(url, {headers: {'User-Agent': 'okhttp'}})
-            .then(function(response) {
-                return response.blob();
-            })
-            .then(function(blob) {
-                var downloadUrl = URL.createObjectURL(blob);
-                var a = document.createElement('a');
-                a.href = downloadUrl;
-                a.download = 'file.jar';
-                a.click();
-                URL.revokeObjectURL(downloadUrl);
-                document.getElementById('loading').style.display = 'none';
-            });
-            document.getElementById('loading').style.display = 'block';
-        }
-    
-        function copyText() {
-          var copyText = document.getElementById("result");
-          copyText.select();
-          copyText.setSelectionRange(0, 99999);
-          document.execCommand("copy");
-          alert("偷取成功！");
-        }
-
-
-    </script>
+  <div class="content">
+    <input id="in" type="text" class="ctxt" placeholder="请输入配置文件地址" />
+    <button id="btn" class="btm" type="button">确定</button>
+  </div>
 </body>
+<script>
+  var inp = document.getElementById('in');
+  var btn = document.getElementById('btn');
+  btn.onclick = function() {
+    var url = inp.value;
+    if (url == '') {
+      alert('请输入配置文件地址');
+      return;
+    }
+    inp.value = ""
+    window.open("/api?url=" + url);
+  }
+</script>
+
 </html>
