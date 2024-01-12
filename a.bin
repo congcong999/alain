@@ -1,0 +1,142 @@
+ {
+ "蓝奏云接口": "https://alain.lanzoul.com/filemoreajax.php",
+  "分享内容":"【阿兰笔记】\n软件下载地址（1）\nhttps://wwy.lanzout.com/s/zzrjk2\n下载地址（2）\nhttps://zzrjk1.lanzouk.com/s/zzrjk4\n官网地址（1）\nwww.zzrjk.com\n官网地址（2）\nwww.zzrjk.app\n（复制链接去浏览器打开）",
+  "群KEY":"https://t.me/Alain9955",
+  "客服QQ":"暂无",
+  "客服微信":"暂无",
+  "启动页图片":"https://pb.nichi.co/eye-parade-crater",
+  "启动页跳转":"https://t.me/Alain9955",
+  "启动页标题":"阿兰笔记",
+  "启动页副标题":"【破解软件】",
+  "启动页跳转时间":"5",
+
+  "公告标题":"",
+  "公告内容":"正在修复，大家耐心等待",
+  "公告图片": "",
+  "公告按钮一":"知道了",
+  "公告按钮一跳转":"",
+  "公告按钮二":"知道了",
+  "公告按钮二跳转":"",
+  "公告按钮三":"知道了",
+  "公告按钮三跳转":"",
+  
+  "当前版本": "1.5",
+  "更新标题": "阿兰笔记新版本v1.5\n请下载新版本",
+  "更新内容": "1.修复有的用户不能使用\n2.上新游戏，超级好玩\n猪猪软件库【官网】\nwww.zzrjk.com",
+  "强制更新": "开启",
+  "更新按钮一":"点击更新",
+  "更新按钮一跳转":"https://alain.lanzoum.com/b0dcllp1e",
+  "更新按钮二":"点击更新2",
+  "更新按钮二跳转":"https://alain.lanzoum.com/b0dcllp4h",
+  "更新按钮三":"点击更新3",
+  "更新按钮三跳转":"https://alain.lanzoum.com/b0dcllp6j",
+
+  "界面一标题": "首页",
+  "界面一副标题": "",
+  "首页滚动公告": "欢迎使用阿兰笔记，每天免费分享破解软件！",
+  "首页文字": "公告",
+
+  "界面二标题": "软件",
+  "界面二副标题": "【破解软件】【免费使用】",
+
+  "界面三标题": "发现",
+  "界面三副标题": "",
+
+  "界面四标题": "我的",
+  "界面四副标题": "",
+  "界面四文字一": "阿兰笔记",
+  "界面四文字二": "v1.5",
+  "界面四文字三": "永久免费",
+
+  "界面四选项": [
+    {
+      "标题": "永久地址",
+      "副标题": "一定要收藏起来",
+      "链接": "https://tb.zhuzhugg.cc/index.php/7.html"
+    },
+    {
+      "标题": "联系作者",
+      "副标题": "合作可以联系我",
+      "链接": "https://tb.zhuzhugg.cc/index.php/10.html"
+    },
+    {
+      "标题": "软件反馈",
+      "副标题": "有问题可以反馈",
+      "链接": "https://tb.zhuzhugg.cc/index.php/21.html"
+    },
+    {
+      "标题": "飞机频道群",
+      "副标题": "可以搜索@Alain9955",
+      "链接": "https://t.me/Alain9955"
+    }
+  ],
+
+  "软件分类": [
+    {
+      "标题": "手机应用",
+      "任务": "关闭",
+      "链接": "https://alain.lanzoum.com/b0dclld6h",
+      "置顶": [
+
+      ]
+    },
+    {
+      "标题": "电视TV",
+      "任务": "关闭",
+      "链接": "https://alain.lanzoum.com/b0dcllldc",
+      "置顶": [
+        
+      ]
+    },
+     {
+      "标题": "̥电脑应用",
+      "任务": "关闭",
+      "链接": "https://alain.lanzoum.com/b0dclllmb",
+      "置顶": [
+        
+      ]
+    },
+     {
+      "标题": "其他应用",
+      "任务": "关闭",
+      "链接": "https://alain.lanzoum.com/b0dclllrg",
+      "置顶": [
+        
+      ]
+    }
+  ],
+
+  "首页轮播图": [
+    {
+      "标题": "阿兰笔记",
+      "图片": "https://ta.zhuzhugg.cc/LightPicture/2023/09/71edc2ae5fd717a5.jpg",
+      "链接": "https://tb.zhuzhugg.cc/index.php/7.html"
+    }
+  ],
+
+  "首页列表": [
+    {
+      "图片": "https://ta.zhuzhugg.cc/LightPicture/2023/09/a84992a41ebbdca7.jpg",
+      "链接": "https://tb.zhuzhugg.cc/index.php/7.html"
+    },
+    {
+      "图片": "https://ta.zhuzhugg.cc/LightPicture/2023/09/90d4305c96981a74.jpg",
+      "链接": "https://tb.zhuzhugg.cc/index.php/8.html"
+    }
+  ],
+
+  "线报列表": [
+    {
+      "标题": "永久地址",
+      "内容": "（记得收藏）",
+      "图片": "https://ta.zhuzhugg.cc/LightPicture/2023/09/a84992a41ebbdca7.jpg",
+      "链接": "https://tb.zhuzhugg.cc/index.php/7.html"
+    },
+    {
+      "标题": "软件各种问题",
+      "内容": "（解决方法）",
+      "图片": "https://ta.zhuzhugg.cc/LightPicture/2023/09/90d4305c96981a74.jpg",
+      "链接": "https://tb.zhuzhugg.cc/index.php/8.html"
+    }
+  ]
+}
